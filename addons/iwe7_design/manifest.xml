@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns="http://www.we7.cc" versionCode="">
+    <application setting="true">
+        <name>
+            <![CDATA[模块设计工具]]>
+        </name>
+        <identifie>
+            <![CDATA[iwe7_design]]>
+        </identifie>
+        <version>
+            <![CDATA[1.1.5]]>
+        </version>
+        <type>
+            <![CDATA[business]]>
+        </type>
+        <ability>
+            <![CDATA[模块设计工具]]>
+        </ability>
+        <description>
+            <![CDATA[模块设计工具]]>
+        </description>
+        <author>
+            <![CDATA[iwe7]]>
+        </author>
+        <url>
+            <![CDATA[http://bbs.we7.cc]]>
+        </url>
+    </application>
+    <platform>
+        <subscribes></subscribes>
+        <handles></handles>
+        <rule embed="false" />
+        <card embed="false" />
+    </platform>
+    <bindings>
+        <cover call="getCover">
+            <entry title="首页" do="index" state="" direct="true"/>
+        </cover>
+        <menu call="getMenu"></menu>
+    </bindings>
+    <permissions></permissions>
+    <install>
+        <![CDATA[install.php]]>
+    </install>
+    <uninstall>
+        <![CDATA[uninstall.php]]>
+    </uninstall>
+    <upgrade>
+        <![CDATA[upgrade.php]]>
+    </upgrade>
+</manifest>
