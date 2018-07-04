@@ -3,22 +3,22 @@
     xmlns="http://www.we7.cc" versionCode="">
     <application setting="false">
         <name>
-            <![CDATA[oauth2.0授权]]>
+            <![CDATA[汽车维修]]>
         </name>
         <identifie>
-            <![CDATA[iwe7_oauth2]]>
+            <![CDATA[iwe7_car]]>
         </identifie>
         <version>
-            <![CDATA[1.0.0]]>
+            <![CDATA[1.0.1]]>
         </version>
         <type>
             <![CDATA[business]]>
         </type>
         <ability>
-            <![CDATA[oauth2.0授权]]>
+            <![CDATA[汽车维修]]>
         </ability>
         <description>
-            <![CDATA[oauth2.0授权]]>
+            <![CDATA[汽车维修]]>
         </description>
         <author>
             <![CDATA[iwe7]]>
@@ -35,7 +35,7 @@
     </platform>
     <bindings>
         <cover call="getCover">
-            <entry title="授权" do="oauth2" state="" direct="true"/>
+            <entry title="店铺开单" do="index" state="" direct="true"/>
         </cover>
         <menu call="getMenu"></menu>
     </bindings>

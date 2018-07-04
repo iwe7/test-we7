@@ -69,17 +69,17 @@ if ($do == 'check_subscribe') {
 }
 
 if ($do == 'get_upgrade_info') {
-	$modulename = trim($_GPC['name']);
+    $modulename = trim($_GPC['name']);
 
     $module = module_fetch($modulename);
     if (empty($module)) {
         iajax(1, '模块不存在！');
     }
     $manifest = ext_module_manifest($modulename);
-	$manifest_cloud = cloud_m_upgradeinfo($modulename);
+    $manifest_cloud = cloud_m_upgradeinfo($modulename);
 
-	$iwe7Log->info('模块不存在或是未安装', $manifest);
-	$iwe7Log->info('模块不存在或是未安装', $manifest_cloud);
+    $iwe7Log->info('模块不存在或是未安装', $manifest);
+    $iwe7Log->info('模块不存在或是未安装', $manifest_cloud);
 
     if (is_error($manifest_cloud)) {
         iajax(1, $manifest_cloud['message']);
@@ -586,9 +586,8 @@ if ($do == 'recycle') {
 
 if ($do == 'installed') {
     $_W['page']['title'] = '应用列表';
-
     $module_list = module_installed_list($module_support);
-
+    // $systemLog->info('module_list', $module_list);
     if (!empty($module_list)) {
         foreach ($module_list as $key => &$module) {
             if (!empty($module['issystem'])) {
@@ -599,7 +598,6 @@ if ($do == 'installed') {
                     unset($module_list[$key]);
                 }
             }
-
         }
         unset($module);
     }

@@ -1,9 +1,9 @@
 <?php
-define("IWE7MODULE", 'iwe7_oauth2');
+define("IWE7MODULE", 'iwe7_cars');
 require_once IA_ROOT . "/addons/" . IWE7MODULE . "/core/iwe7.utility.php";
 require_once IA_ROOT . "/addons/" . IWE7MODULE . "/core/iwe7.base.php";
 require_once IA_ROOT . "/addons/" . IWE7MODULE . "/core/iwe7_table.base.php";
-class Iwe7_oauth2ModuleSite extends WeModuleSite
+class Iwe7_carModuleSite extends WeModuleSite
 {
     private function debug()
     {
@@ -100,7 +100,7 @@ class Iwe7_oauth2ModuleSite extends WeModuleSite
         }
         $module_type = stripos($name, 'doWeb') === 0 ? 'web' : 'mobile';
         if ($module_type === 'web') {
-            $this->tpl('web/index');
+            $this->tpl('index');
         } else {
             $this->tpl('index');
         }
