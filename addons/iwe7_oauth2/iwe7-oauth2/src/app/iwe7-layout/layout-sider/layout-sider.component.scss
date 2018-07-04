@@ -1,0 +1,15 @@
+.logo {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  nz-avatar {
+    width: 150px;
+    background: #108ee9;
+  }
+}
+
+li {
+  outline: none;
+}
