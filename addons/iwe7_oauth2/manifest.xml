@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns="http://www.we7.cc" versionCode="">
+    <application setting="true">
+        <name>
+            <![CDATA[oauth2.0授权]]>
+        </name>
+        <identifie>
+            <![CDATA[iwe7_oauth2]]>
+        </identifie>
+        <version>
+            <![CDATA[1.0.0]]>
+        </version>
+        <type>
+            <![CDATA[business]]>
+        </type>
+        <ability>
+            <![CDATA[oauth2.0授权]]>
+        </ability>
+        <description>
+            <![CDATA[oauth2.0授权]]>
+        </description>
+        <author>
+            <![CDATA[iwe7]]>
+        </author>
+        <url>
+            <![CDATA[http://bbs.we7.cc]]>
+        </url>
+    </application>
+    <platform>
+        <subscribes></subscribes>
+        <handles></handles>
+        <rule embed="false" />
+        <card embed="false" />
+    </platform>
+    <bindings>
+        <cover call="getCover">
+            <entry title="授权" do="oauth2" state="" direct="true"/>
+        </cover>
+        <menu call="getMenu"></menu>
+    </bindings>
+    <permissions></permissions>
+    <install>
+        <![CDATA[install.php]]>
+    </install>
+    <uninstall>
+        <![CDATA[uninstall.php]]>
+    </uninstall>
+    <upgrade>
+        <![CDATA[upgrade.php]]>
+    </upgrade>
+</manifest>

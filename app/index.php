@@ -1,7 +1,7 @@
 <?php
 /**
- * [WeEngine System] Copyright (c) 20180622163937 WE7.CC
- * WeEngine is NOT a free software, it under the license terms, visited http://www.we7.cc/ for more details.
+ * [WeEngine System] Copyright (c) 2013 WE7.CC
+ * $sn$
  */
 define('IN_MOBILE', true);
 
@@ -23,9 +23,11 @@ if ($_W['setting']['copyright']['status'] == 1) {
 	$_W['siteclose'] = true;
 	message('抱歉，站点已关闭，关闭原因：' . $_W['setting']['copyright']['reason']);
 }
+// 多微站id(主要用于预览功能【区分导航链接】)
 $multiid = intval($_GPC['t']);
 if(empty($multiid)) {
-		$multiid = intval($unisetting['default_site']);
+	// 获取指定的默认微站
+	$multiid = intval($unisetting['default_site']);
 	unset($setting);
 }
 
@@ -42,6 +44,7 @@ $template = $templates[$templateid];
 $_W['template'] = !empty($template) ? $template['name'] : 'default';
 $_W['styles'] = array();
 
+//对于设置的默认风格，判断该用户有没有该风格对应的模板的使用权限，如果没有，直接default，不再加载该风格自定义的变量。
 if(!empty($template) && !empty($style)) {
 	$sql = "SELECT `variable`, `content` FROM " . tablename('site_styles_vars') . " WHERE `uniacid`=:uniacid AND `styleid`=:styleid";
 	$params = array();

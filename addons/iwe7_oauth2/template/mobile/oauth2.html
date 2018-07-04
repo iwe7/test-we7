@@ -1,0 +1,11 @@
+{template 'common/header'}
+<form method="post">
+    <label>Do You Authorize TestClient?</label>
+    <br />
+    <input type="text" name="client_id" value="testclient">
+    <input type="text" name="client_secret" value="testpass">
+    <input type="text" name="grant_type" value="client_credentials">
+    <input type="submit" name="authorized" value="yes">
+    <input type="submit" name="authorized" value="no">
+</form>
+{template 'common/footer'}
